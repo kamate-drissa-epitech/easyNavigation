@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: sans-serif;
+}
+.search {
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.search.active {
+  opacity: 1;
+  pointer-events: auto;
+  transition: .3s;
+}
+
+.bar {
+  position: relative;
+  width: 350px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.bar input {
+  width: 100%;
+  padding: 10px;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  left: 0;
+  margin: -5px 0 0 0;
+  right: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+}
+
+.suggestions li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+  color: inherit;
+}
+
+/* .suggestions mark {
+  background: #000;
+  color: #fff;
+} */
+
+.suggestions a li.active a,
+.suggestions a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
